@@ -4,7 +4,7 @@
 
 <title>boston_housing_PT</title>
 
-<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FC89460B-FD98-C34F-860B-CA10FCE7AD14/main.js" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
@@ -13089,7 +13089,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13701,9 +13701,10 @@ Analisando novamente, fica claro que o valor de R2 que representa 92,30 % da var
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Resposta: </strong></p>
 <ul>
+<li>Vamos começar falando do max_depth = 3, que quanto mais pontos de treinamento são fornecidos, tanto a curva de treinamento quanto a curva de teste estão convergindo para cerca de 0,8 pontos, apresentando um bom score. Eu escolho o gráfioco de max_depth = 3 porque é possivel notar a aproximidade das curvas a partir do score 0,8.</li>
 <li>O max_depth = 1 tem a pontuação de R2 baixo não trazendo a uma resposta factivel, ou seja, não explica bem o modelo.</li>
-<li>Eu escolho o gráfioco de max_depth = 3 porque é possivel notar a aproximidade das curvas a partir do score 0,8.</li>
-<li>Já o max_depth = 6 e max_depth = 10 fica evidente a necessidade de mais dados, pois é observavel que as curvas estão bem distantes, vai demorar um pouco até convergirem.</li>
+<li>Se inserido mais pontos de treinamento, isso só trará benefícios para o modelo (em alguns casos), fazendo as curvas convergirem, quando o ápice for alcançado, ou seja, a convergência ter ocorrido, não será mais necessário adicionar mais pontos, pois o objetivo já terá sido cumprido. Mas é sempre bom destacar que conseguir mais dados acarreta em mais custos.</li>
+<li>É possível afirmar que max_depth=  6 é um dos beneficiados pela adição de mais dados de treinamento, isso já não vale para   max_depth= 10, e em relação ao max_depth= 10 parece que o modelo foi se adaptando ao conjunto de treinamento ficando evidente que o modelo se tornou viciado.</li>
 </ul>
 
 </div>
