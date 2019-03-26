@@ -13142,7 +13142,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Importar as bibliotecas necessárias para este projeto</span>
@@ -13212,7 +13212,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13319,7 +13319,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Preço mínimo dos dados</span>
@@ -13433,7 +13433,7 @@ Desvio padrão dos preços: $165,340.28
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Importar &#39;r2_score&#39;</span>
@@ -13494,7 +13494,7 @@ Desvio padrão dos preços: $165,340.28
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calcular o desempenho deste modelo</span>
@@ -13546,7 +13546,7 @@ Desvio padrão dos preços: $165,340.28
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Resposta:</strong>
-O modelo não apresentou uma resposta precisa, ou seja, para as estimativas, não teve muita acertividade, porém, dependendo do projeto, essas metricas podem ser utilizadas.</p>
+Analisando novamente, fica claro que o valor de R2 que representa 92,30 % da variação, o modelo tem uma correlçao muito consistente, após rever esta etapa, é possivel afirmar que o modelo também obteve a varição da variavel de destino. Concluise que a varição em y pode sim ser prevista pelo modelo</p>
 
 </div>
 </div>
@@ -13570,7 +13570,7 @@ O modelo não apresentou uma resposta precisa, ou seja, para as estimativas, nã
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Importar &#39;train_test_split&#39;</span>
@@ -13578,7 +13578,7 @@ O modelo não apresentou uma resposta precisa, ou seja, para as estimativas, nã
 
 <span class="c1"># TODO: Misturar e separar os dados em conjuntos de treinamento e teste</span>
 <span class="c1">#X_train, X_test, y_train, y_test = (None, None, None, None)</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">prices</span><span class="p">,</span><span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">prices</span><span class="p">,</span><span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="c1"># Êxito</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Separação entre treino e teste feita com êxito.&quot;</span><span class="p">)</span>
@@ -13701,7 +13701,9 @@ O modelo não apresentou uma resposta precisa, ou seja, para as estimativas, nã
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Resposta: </strong></p>
 <ul>
+<li>O max_depth = 1 tem a pontuação de R2 baixo não trazendo a uma resposta factivel, ou seja, não explica bem o modelo.</li>
 <li>Eu escolho o gráfioco de max_depth = 3 porque é possivel notar a aproximidade das curvas a partir do score 0,8.</li>
+<li>Já o max_depth = 6 e max_depth = 10 fica evidente a necessidade de mais dados, pois é observavel que as curvas estão bem distantes, vai demorar um pouco até convergirem.</li>
 </ul>
 
 </div>
@@ -13768,10 +13770,8 @@ O modelo não apresentou uma resposta precisa, ou seja, para as estimativas, nã
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Resposta: </strong></p>
-<p>É possivel afirmar que quando a vairiência é alta e o viés muito baixo o modelo produzido não vai ter um bom desempenho, produzindo infomações divergentes
-No caso do modelo 1, o resultado apresntado mostra a sua ineficiencia, fica claro com os dados de treinamento e com
-os dados de testes.
-Tanto no modelo com profundidade 1 e o 10, temos comportamento de Overfiting, sendo que no 10 o treinamento se comportou positivamente mas pecou nos testes.</p>
+<p>É possivel afirmar que quando a vairiência é alta e o viés muito baixo o modelo produzido não vai ter um bom desempenho, produzindo infomações divergentes, ou seja, teemos um modelo Underfiting. Isso ocorre no modelo de profundidade 1, o resultado apresntado mostra a sua ineficiencia, fica claro com os dados de treinamento e com os dados de testes, efidenciando o Underfiting.
+No modelo de profundidade 10, temos comportamento de Overfiting, sendo que no 10 o treinamento se comportou positivamente mas pecou nos testes.</p>
 
 </div>
 </div>
@@ -13846,12 +13846,11 @@ Ela vai otimizar pois vai realizar o corte de parametros desnecessários para o 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Resposta: </strong>
-A validação cruzada é uma técnica para avaliar a capacidade de generalização de um modelo, utilizando o nosso data.frame. A técnica é amplamente empregada em problemas onde o objetivo da modelagem é a predição, ou seja, em modelos de machine learning por exemplo, que é o nosso caso. O algoritmo busca stimar o quão preciso é este modelo na prática, ou seja, o seu desempenho para um novo conjunto de dados (no caso os dados de testes).
-Os beneficios é poder deixar com mais qualidade e facilitar exergar possiveis alterações depois de aplicar os dados de trestes.
-A técnica de treinamento de validação-cruzada k-fold possibilita a reciclagem dos dados. Sendo o K subconjuntos mutuamente exclusivos. Os dados serão divididos em k folds, cujo k será o número de folds que será criado.
-Veja um exemplo, um dataset com 1000 amostras poderá ter k = 50, ocasionando em 50 folds, usando uma combinação de 40 folds para treino e uma ficará para teste.
-Um das vantagens que também pode se destacadas é o método é permite que todas as observações são usadas para treinamento e validação, cada observação, pode ser usada para validação exatamente uma vez.</p>
+<p><strong>Resposta: </strong></p>
+<ul>
+<li>A validação cruzada é uma técnica para avaliar a capacidade de generalização de um modelo, utilizando o nosso data.frame. A técnica é amplamente empregada em problemas onde o objetivo da modelagem é a predição, ou seja, em modelos de machine learning por exemplo, que é o nosso caso. O algoritmo busca stimar o quão preciso é este modelo na prática, ou seja, o seu desempenho para um novo conjunto de dados (no caso os dados de testes).</li>
+<li>Os beneficios é poder deixar com mais qualidade e facilitar exergar possiveis alterações depois de aplicar os dados de trestes. A técnica de treinamento de validação-cruzada k-fold possibilita a reciclagem dos dados. Sendo o K subconjuntos mutuamente exclusivos. Os dados serão divididos em k folds, cujo k será o número de folds que será criado. Um das vantagens que também pode se destacadas é o método é permite que todas as observações são usadas para treinamento e validação, cada observação, pode ser usada para validação exatamente uma vez.</li>
+</ul>
 
 </div>
 </div>
@@ -14003,7 +14002,7 @@ c:\users\paulo ricardo\appdata\local\programs\python\python37-32\lib\site-packag
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Dica: </strong> A resposta vem da saída do código acima.</p>
 <p><strong>Resposta: </strong></p>
-<p>A profundidade máxima do modelo ótimo é 4. Comparando a reposta da questão 6, o resultado fica entre os valores que já tinha destacado, entre 3 e 4.</p>
+<p>A profundidade máxima do modelo ótimo é 5. Comparando a reposta da questão 6, o resultado fica entre os valores que já tinha destacado, entre 3 e 6, confirmando as minha recomendações.</p>
 
 </div>
 </div>
